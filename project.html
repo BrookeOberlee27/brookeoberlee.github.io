@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f5f5f1" />
+  <title>Project — Jarret Dlugy</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="js/content.js"></script>
+  <script defer src="js/project.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="index.html" aria-label="Back to Jarret Dlugy portfolio">JD</a>
+    <nav class="nav" aria-label="Project navigation">
+      <a href="index.html#work">All projects</a>
+      <a href="assets/Jarret_Dlugy_Resume.pdf" target="_blank" rel="noreferrer">Résumé ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <article id="project-page" class="project-page shell" hidden>
+      <a class="back-link" href="index.html#work">← Selected work</a>
+      <header class="project-hero">
+        <div class="project-title-wrap">
+          <p class="eyebrow" id="project-label"></p>
+          <h1 id="project-title"></h1>
+          <p class="project-deck" id="project-deck"></p>
+        </div>
+        <dl class="project-facts" id="project-facts"></dl>
+      </header>
+
+      <figure class="project-hero-image">
+        <img id="project-hero-image" alt="" />
+        <figcaption id="project-hero-caption"></figcaption>
+      </figure>
+
+      <div class="case-study" id="case-study"></div>
+      <div class="gallery" id="project-gallery"></div>
+
+      <nav class="project-next" aria-label="Next project">
+        <span class="eyebrow">Next project</span>
+        <a id="next-project-link" href="#"><span id="next-project-title"></span><span aria-hidden="true">↗</span></a>
+      </nav>
+    </article>
+
+    <section id="project-error" class="project-error shell" hidden>
+      <p class="eyebrow">Project not found</p>
+      <h1>That project link is missing or invalid.</h1>
+      <a class="button button-primary" href="index.html#work">Back to portfolio</a>
+    </section>
+  </main>
+
+  <footer class="footer shell">
+    <span>Jarret Dlugy</span>
+    <span>Mechanical Engineering · UMass Amherst</span>
+  </footer>
+</body>
+</html>
