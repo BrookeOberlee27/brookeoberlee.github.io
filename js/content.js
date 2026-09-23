@@ -5,16 +5,17 @@
 */
 window.PORTFOLIO = {
   person: {
-    name: "Jarret Dlugy",
-    role: "Mechanical Engineer",
+    name: "Brooke Oberlee",
+    major: "Mechanical Engineer",
+    minor: "Environmental Science",
     school: "University of Massachusetts Amherst",
-    graduation: "December 2026",
+    graduation: "Spring 2027",
     location: "Massachusetts",
-    email: "jdlex926@gmail.com",
+    email: "oberlee27@gmail.com",
     linkedin: "https://www.linkedin.com/in/jarret-dlugy/",
-    heroKicker: "Mechanical Engineering Portfolio",
-    heroTitle: "Jarret Dlugy",
-    heroCopy: "University of Massachusetts Amherst · December 2026",
+    heroKicker: "Engineering Portfolio",
+    heroTitle: "Brooke Oberlee",
+    heroCopy: "University of Massachusetts Amherst · Spring 2027",
     aboutTitle: "From Lexington, Massachusetts to UMass Amherst.",
     aboutTitle: "From Lexington, Massachusetts to UMass Amherst.",
     aboutCopy: "I grew up in Lexington, Massachusetts and am currently finishing my mechanical engineering degree at UMass Amherst. I like engineering most when I can actually build something, whether that means CAD, machining, prototyping, testing, or fixing something that did not work the first time. Outside of engineering, I enjoy strength training, running, hiking year-round, and traveling. I have visited Hungary, Vietnam, Switzerland, Bosnia, Cambodia, and Chile."
