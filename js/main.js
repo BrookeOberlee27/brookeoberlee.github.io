@@ -1,50 +1,53 @@
 (() => {
   const data = window.PORTFOLIO;
+  const { esc, url, figure, thumb } = window.UI;
   const $ = (selector) => document.querySelector(selector);
+  const person = data.person;
 
-  $("#hero-kicker").textContent = data.person.heroKicker;
-  $("#hero-title").textContent = data.person.heroTitle;
-  $("#hero-copy").textContent = data.person.heroCopy;
-  $("#linkedin-link").href = data.person.linkedin;
-  $("#email-link").href = `mailto:${data.person.email}`;
-  $("#about-title").textContent = data.person.aboutTitle;
-  $("#about-copy").textContent = data.person.aboutCopy;
+  // Hero / about
+  $("#hero-name").textContent = person.name;
+  $("#hero-tagline").textContent = person.tagline;
+  $("#hero-lines").innerHTML = person.intro.map((line) => `<p>${esc(line)}</p>`).join("");
+  const photo = $("#hero-photo");
+  photo.src = url(person.headshot);
+  photo.alt = person.headshotAlt;
+  $("#hero-email").href = `mailto:${person.email}`;
+  $("#hero-email").textContent = "Email me";
+
+  // Project groups follow the table of contents slide
+  const projectsById = Object.fromEntries(data.projects.map((project) => [project.id, project]));
+
+  const row = (project) => `
+    <a class="project-row" href="project.html?id=${encodeURIComponent(project.id)}">
+      <figure class="project-thumb">${thumb(project.hero, project.heroAlt)}</figure>
+      <div class="project-text">
+        <h3>${esc(project.title)}</h3>
+        <p class="project-meta">${esc(project.role)}</p>
+        <p class="project-summary">${esc(project.summary)}</p>
+        <ul class="tags">${project.tags.slice(0, 4).map((tag) => `<li>${esc(tag)}</li>`).join("")}</ul>
+      </div>
+    </a>`;
+
+  $("#groups").innerHTML = data.groups.map((group) => `
+    <section class="band theme-${esc(group.theme)}" id="${esc(group.id)}" aria-labelledby="${esc(group.id)}-title">
+      <div class="shell">
+        <h2 id="${esc(group.id)}-title">${esc(group.title)}</h2>
+        <div class="project-list">${group.projects.map((id) => row(projectsById[id])).join("")}</div>
+      </div>
+    </section>`).join("");
+
+  // Interests
+  $("#interest-grid").innerHTML = data.interests.map(figure).join("");
+
+  // Skills and contact
+  $("#skills").innerHTML = data.skills.map((group) => `
+    <dt>${esc(group.title)}</dt>
+    <dd>${esc(group.items)}</dd>`).join("");
+  const email = $("#email-link");
+  email.href = `mailto:${person.email}`;
+  email.textContent = person.email;
+  $("#linkedin-link").href = person.linkedin;
+  $("#location-line").textContent = person.location;
+
   $("#year").textContent = new Date().getFullYear();
-
-  const meta = [data.person.role, data.person.school, `Graduating ${data.person.graduation}`];
-  $("#hero-meta").innerHTML = meta.map(item => `<span>${item}</span>`).join("");
-
-  $("#project-grid").innerHTML = data.projects.map(project => `
-    <a class="project-card" href="project.html?id=${encodeURIComponent(project.id)}" aria-label="View ${project.title} case study">
-      <div class="project-media">
-        <img src="${project.hero}" alt="${project.heroAlt}" loading="lazy" />
-      </div>
-      <div class="project-info">
-        <div>
-          <h3>${project.title}</h3>
-          <p>${project.cardDescription}</p>
-          <div class="tag-row">${project.tags.slice(0,4).map(tag => `<span class="tag">${tag}</span>`).join("")}</div>
-        </div>
-        <span class="project-arrow" aria-hidden="true">↗</span>
-      </div>
-    </a>
-  `).join("");
-
-  $("#experience-list").innerHTML = data.experience.map(item => `
-    <article class="timeline-item">
-      <div>
-        <h3>${item.role}</h3>
-        <p>${item.company}</p>
-      </div>
-      <p>${item.summary}</p>
-      <p class="period">${item.period}</p>
-    </article>
-  `).join("");
-
-  $("#skill-groups").innerHTML = data.skills.map(group => `
-    <section class="skill-group">
-      <h3>${group.title}</h3>
-      <p>${group.items}</p>
-    </section>
-  `).join("");
 })();

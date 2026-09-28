@@ -1,48 +1,43 @@
 (() => {
   const data = window.PORTFOLIO;
-  const params = new URLSearchParams(window.location.search);
-  const id = params.get("id");
-  const projectIndex = data.projects.findIndex(project => project.id === id);
-  const project = data.projects[projectIndex];
-  const page = document.querySelector("#project-page");
-  const error = document.querySelector("#project-error");
+  const { esc, figure, bullets } = window.UI;
+  const $ = (selector) => document.querySelector(selector);
+
+  $("#year").textContent = new Date().getFullYear();
+
+  const id = new URLSearchParams(window.location.search).get("id");
+  const project = data.projects.find((item) => item.id === id);
 
   if (!project) {
-    error.hidden = false;
+    $("#project-error").hidden = false;
     return;
   }
 
-  document.title = `${project.title} — ${data.person.name}`;
-  document.querySelector("#project-label").textContent = project.label;
-  document.querySelector("#project-title").textContent = project.title;
-  document.querySelector("#project-deck").textContent = project.deck;
+  // Order used for the "next project" link matches the table of contents
+  const order = data.groups.flatMap((group) => group.projects);
+  const nextId = order[(order.indexOf(project.id) + 1) % order.length];
+  const next = data.projects.find((item) => item.id === nextId);
+  const group = data.groups.find((item) => item.projects.includes(project.id));
 
-  const hero = document.querySelector("#project-hero-image");
-  hero.src = project.hero;
-  hero.alt = project.heroAlt;
-  document.querySelector("#project-hero-caption").textContent = project.heroCaption;
+  document.title = `${project.title} | ${data.person.name}`;
+  $("#project-title").textContent = project.title;
+  $("#project-role").textContent = project.role;
+  $("#project-summary").textContent = project.summary;
+  if (group) $("#back-link").href = `index.html#${group.id}`;
 
-  document.querySelector("#project-facts").innerHTML = Object.entries(project.facts).map(([key, value]) => `
-    <div class="fact"><dt>${key}</dt><dd>${value}</dd></div>
-  `).join("");
+  $("#project-sections").innerHTML = project.sections.map((section) => `
+    <section class="slide">
+      <div class="slide-text">
+        <h2>${esc(section.title)}</h2>
+        ${section.intro ? `<p class="intro">${esc(section.intro)}</p>` : ""}
+        ${bullets(section.bullets)}
+      </div>
+      <div class="media-grid">${(section.media || []).map(figure).join("")}</div>
+    </section>`).join("");
 
-  document.querySelector("#case-study").innerHTML = project.sections.map(section => `
-    <section class="case-section">
-      <h2>${section.title}</h2>
-      <p>${section.body}</p>
-    </section>
-  `).join("");
+  const nextLink = $("#next-link");
+  nextLink.href = `project.html?id=${encodeURIComponent(next.id)}`;
+  nextLink.textContent = next.title;
 
-  document.querySelector("#project-gallery").innerHTML = project.gallery.map(image => `
-    <figure>
-      <img src="${image.src}" alt="${image.alt}" loading="lazy" />
-      <figcaption>${image.caption}</figcaption>
-    </figure>
-  `).join("");
-
-  const next = data.projects[(projectIndex + 1) % data.projects.length];
-  document.querySelector("#next-project-link").href = `project.html?id=${encodeURIComponent(next.id)}`;
-  document.querySelector("#next-project-title").textContent = next.title;
-
-  page.hidden = false;
+  $("#project-page").hidden = false;
 })();

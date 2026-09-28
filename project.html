@@ -3,58 +3,53 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#f5f5f1" />
-  <title>Project — Jarret Dlugy</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#f3f3ee" />
+  <title>Project | Brooke Oberlee</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2326336b'/%3E%3Ctext x='16' y='23' font-family='Arial' font-size='20' font-weight='700' text-anchor='middle' fill='%23f3f3ee'%3EB%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap" />
   <link rel="stylesheet" href="styles.css" />
   <script defer src="js/content.js"></script>
+  <script defer src="js/common.js"></script>
   <script defer src="js/project.js"></script>
 </head>
 <body>
   <header class="site-header">
-    <a class="wordmark" href="index.html" aria-label="Back to Jarret Dlugy portfolio">JD</a>
-    <nav class="nav" aria-label="Project navigation">
-      <a href="index.html#work">All projects</a>
-      <a href="assets/Jarret_Dlugy_Resume.pdf" target="_blank" rel="noreferrer">Résumé ↗</a>
-    </nav>
+    <div class="shell header-inner">
+      <a class="wordmark" href="index.html">Brooke Oberlee</a>
+      <nav class="nav" aria-label="Project navigation">
+        <a href="index.html#work">All projects</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <article id="project-page" class="project-page shell" hidden>
-      <a class="back-link" href="index.html#work">← Selected work</a>
-      <header class="project-hero">
-        <div class="project-title-wrap">
-          <p class="eyebrow" id="project-label"></p>
-          <h1 id="project-title"></h1>
-          <p class="project-deck" id="project-deck"></p>
-        </div>
-        <dl class="project-facts" id="project-facts"></dl>
+    <article class="project-page shell" id="project-page" hidden>
+      <header class="project-head">
+        <a class="back-link" id="back-link" href="index.html#work">Back to all projects</a>
+        <h1><span id="project-title"></span><span class="light" id="project-role"></span></h1>
+        <p class="project-lede" id="project-summary"></p>
       </header>
-
-      <figure class="project-hero-image">
-        <img id="project-hero-image" alt="" />
-        <figcaption id="project-hero-caption"></figcaption>
-      </figure>
-
-      <div class="case-study" id="case-study"></div>
-      <div class="gallery" id="project-gallery"></div>
-
+      <div id="project-sections"></div>
       <nav class="project-next" aria-label="Next project">
-        <span class="eyebrow">Next project</span>
-        <a id="next-project-link" href="#"><span id="next-project-title"></span><span aria-hidden="true">↗</span></a>
+        <p>Next project</p>
+        <a id="next-link" href="#"></a>
       </nav>
     </article>
 
-    <section id="project-error" class="project-error shell" hidden>
-      <p class="eyebrow">Project not found</p>
+    <section class="project-error shell" id="project-error" hidden>
       <h1>That project link is missing or invalid.</h1>
-      <a class="button button-primary" href="index.html#work">Back to portfolio</a>
+      <p><a class="button button-solid" href="index.html#work">Back to the portfolio</a></p>
     </section>
   </main>
 
-  <footer class="footer shell">
-    <span>Jarret Dlugy</span>
-    <span>Mechanical Engineering · UMass Amherst</span>
+  <footer class="footer">
+    <div class="shell footer-inner">
+      <span>&copy; <span id="year"></span> Brooke Oberlee</span>
+      <span>Mechanical Engineering, UMass Amherst</span>
+    </div>
   </footer>
 </body>
 </html>
