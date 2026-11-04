@@ -54,8 +54,8 @@
       { id: "work", title: "Work experience", theme: "slate", projects: ["regent", "delsys", "reprieve", "makerspace"] },
       { id: "clubs", title: "Clubs and activities", theme: "lilac", projects: ["aeronautics", "bioprinter", "kneevive"] },
       { id: "research", title: "Research", theme: "cream", projects: ["morris-group"] },
-      { id: "classes", title: "Class projects", theme: "navy", projects: ["manufacturing", "mechanical-components", "ece-smart-car"] }
-      { id: "hackathons", title: "Hackathon projects", theme: "lilac", projects: ["ai-hardware-sorter", "shady-business"] },
+      { id: "classes", title: "Class projects", theme: "navy", projects: ["manufacturing", "mechanical-components", "ece-smart-car"] },
+      { id: "hackathons", title: "Hackathon projects", theme: "lilac", projects: ["ai-hardware-sorter", "shady-business"] }
     ],
 
     projects: [
