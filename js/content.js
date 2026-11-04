@@ -419,7 +419,7 @@
             bullets: [
               "Cloning (and simulating cloning in ApE)",
               "Growing up and transforming cells",
-              "Helping synthesize combinatorial protein expression platforms"
+              "Helping synthesize combinatorial protein expression platforms",
               "Extracting and purifying DNA",
               "Measuring the concentration of nucleic acids with a nanophotometer",
               "Measuring cell concentration with a plate reader (OD600)",
