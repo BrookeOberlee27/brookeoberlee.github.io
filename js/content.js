@@ -54,8 +54,8 @@
       { id: "work", title: "Work experience", theme: "slate", projects: ["regent", "delsys", "reprieve", "makerspace"] },
       { id: "clubs", title: "Clubs and activities", theme: "lilac", projects: ["aeronautics", "bioprinter", "kneevive"] },
       { id: "research", title: "Research", theme: "cream", projects: ["morris-group"] },
-      { id: "hackathons", title: "Hackathon projects", theme: "lilac", projects: ["ai-hardware-sorter", "shady-business"] },
       { id: "classes", title: "Class projects", theme: "navy", projects: ["manufacturing", "mechanical-components", "ece-smart-car"] }
+      { id: "hackathons", title: "Hackathon projects", theme: "lilac", projects: ["ai-hardware-sorter", "shady-business"] },
     ],
 
     projects: [
@@ -64,9 +64,9 @@
         id: "regent",
         title: "REGENT Craft",
         role: "Mechanical Systems Intern, Summer 2026",
-        summary: "Redesigned a lower closeout assembly for a fixed main foil, routed sea water cooling for the battery, and built a fixture for a marine medevac litter demonstration.",
+        summary: "Redesigned the lower closeout assembly for the main foil, routed sea water intake for battery cooling, and built a litter fixture for a marine medevac demonstration.",
         tags: ["NX and Teamcenter", "Engineering Drawings", "GD&T", "Metal Fabrication", "3D Printing", "DFMA"],
-        hero: REGENT.p("Slide4SeagliderinHangar.jpeg"),
+        hero: REGENT.p("InternPhoto.jpg"),
         heroAlt: "REGENT Seaglider inside a hangar",
         sections: [
           {
@@ -94,8 +94,8 @@
             media: [
               REGENT.m("Slide4SeawaterCoolingLoop.png", "Sea water cooling loop", "CAD of the sea water cooling tubing loop"),
               REGENT.m("Slide4Catchplate.png", "Catch plate modified with O-rings and sealant", "Exploded view of the modified catch plate"),
-              REGENT.m("Slide4CoolingLooponFoil.png", "Mounts and braces for the intake tubing on the main foil case", "CAD of the main foil case with tubing, mounts, and braces"),
-              REGENT.m("Slide4SeagliderinHangar.jpeg", "The Seaglider in the hangar", "REGENT Seaglider inside a hangar")
+              REGENT.m("Slide4SeagliderinHangar.jpeg", "", "REGENT Seaglider inside a hangar"),
+              REGENT.m("Slide4CoolingLooponFoil.png", "Mounts and braces for the intake tubing on the main foil case", "CAD of the main foil case with tubing, mounts, and braces")
             ]
           },
           {
@@ -121,8 +121,8 @@
         id: "delsys",
         title: "Delsys",
         role: "Hardware and Manufacturing Intern, Summer 2025",
-        summary: "Fabricated PCBs and enclosures on a desktop CNC machine, prototyped watertight enclosures, and micro-soldered components for biofeedback devices.",
-        tags: ["PCB Fabrication", "CAM Toolpaths", "Enclosure Design", "Micro-soldering"],
+        summary: "Fabricated  PCBs and watertight enclosures on a desktop CNC machine. Helped develop prototypes for a biofeedback device",
+        tags: ["PCB Fabrication", "CAM", "CNC Machining", "Rhino CAD"],
         hero: DELSYS.p("Slide6DelsysPCB.jpeg"),
         heroAlt: "Double-sided green PCB fabricated on a desktop CNC machine",
         sections: [
@@ -138,8 +138,8 @@
             ],
             media: [
               DELSYS.m("Slide6DelsysPCB.jpeg", "Double-sided PCB fabricated on the desktop CNC machine"),
-              DELSYS.m("Slide6DelsysCAM.png", "Toolpaths in the CAM application"),
-              DELSYS.m("Slide6DelsysCNCDesktop.mov", "Aluminum enclosure milled on the desktop CNC machine")
+              DELSYS.m("Slide6DelsysCNCDesktop.MOV", "Aluminum enclosure milled on the desktop CNC machine"),
+              DELSYS.m("Slide6DelsysCAM.png", "Toolpaths in the MakeraCAM")
             ]
           },
           {
@@ -149,7 +149,7 @@
               "Developed drawings and efficiently communicated with suppliers to rework a bellow for compression molding"
             ],
             media: [
-              DELSYS.m("Slide7DelsysMicroscope.jpeg", "Micro-soldering at the microscope"),
+              DELSYS.m("Slide7DelsysMicroscope.jpeg", "", "Micro-soldering at the microscope"),
               DELSYS.m("Slide7DelsysSensor.png", "", "Biofeedback device hardware")
             ]
           }
@@ -159,7 +159,7 @@
         id: "reprieve",
         title: "Reprieve Cardiovascular",
         role: "R&D Intern, Summer 2024 and Winter 2025",
-        summary: "Verified software and hardware, built a multipurpose test fixture, and used regression to bring a conductivity sensor into the device.",
+        summary: "Conducted software verification tests and assembled a multi-functional test fixture. Collected and analyzed data for conductivity sensor.",
         tags: ["Software Verification", "EMC and ISO Testing", "Test Fixtures", "Regression Analysis"],
         hero: REPRIEVE.p("Slide8ReprieveTestFixture.jpeg"),
         heroAlt: "Multipurpose test fixture with circuit boards, cables, and 3D-printed mounts on a black board",
@@ -188,8 +188,8 @@
               "Assembled a testing apparatus to collect temperature and conductivity data from the system, a calibrated conductivity meter, and a temperature gauge"
             ],
             media: [
-              REPRIEVE.m("Slide9ConductivitySensorSetup.png", "Testing apparatus for temperature and conductivity data"),
-              REPRIEVE.m("Slide9ReprieveGraph.png", "Regression fit of the system conductance against the reference conductivity meter")
+              REPRIEVE.m("ConductivitySensorSetup.jpg", "", "Testing apparatus"),
+              REPRIEVE.m("Slide9ReprieveGraph.png", "", "Regression fit")
             ]
           }
         ]
@@ -197,9 +197,9 @@
       {
         id: "makerspace",
         title: "UMass All Campus Makerspace",
-        role: "Student Staff Member, Spring 2026 to ongoing",
-        summary: "Repair machines and advise students on projects across the CNC mill, CNC lathe, manual mill, 3D printers, and laser cutter.",
-        tags: ["CNC Mill", "CNC Lathe", "Manual Mill", "Laser Cutting"],
+        role: "Student Staff Member, Part-time",
+        summary: "Repair and maintain equipment. Advise on student projects related to 3D printing, laser cutting, manual and CNC machining.",
+        tags: ["3D Printing", "CNC Lathe", "Manual Mill", "Laser Cutting"],
         hero: MAKER.p("Slide10ManualMill.jpeg"),
         heroAlt: "Manual mill in the UMass Makerspace",
         sections: [
@@ -211,9 +211,8 @@
             ],
             media: [
               MAKER.m("Slide10Lathe.jpeg", "CNC lathe", "CNC lathe in the Makerspace"),
-              MAKER.m("Slide10LaserCutter.jpeg", "Laser cutter", "Laser cutter in the Makerspace"),
-              MAKER.m("Slide10ManualMill.jpeg", "Manual mill", "Manual mill in the Makerspace"),
-              MAKER.m("Slide10Tramming.mov", "Tramming the vise on the CNC mill as part of regular maintenance duties")
+              MAKER.m("YoutubePhoto.png", " ", "Youtube photo"),
+              MAKER.m("Slide10Tramming.MOV", "Tramming the vise on the CNC mill as part of regular maintenance duties")
             ]
           }
         ]
@@ -224,47 +223,54 @@
         id: "aeronautics",
         title: "UMass Aeronautics",
         role: "Mechanical Systems and Manufacturing, 2023 to 2026",
-        summary: "Our team designs, builds, and flies RC airplanes in the AIAA collegiate DBF competition. I worked on banner and glider release mechanisms and on carbon fiber manufacturing.",
-        tags: ["Release Mechanisms", "Carbon Fiber Layup", "3D Printing", "ANSYS"],
+        summary: "Designing, building, and integrating mission-specific components for our RC airplane and participation in the AIAA Design Build Fly competition.",
+        tags: ["Dynamic Mechanisms", "Carbon Fiber Layup", "3D Printing", "ANSYS"],
         hero: AERO.p("Slide11Plane.jpeg"),
         heroAlt: "Black RC airplane with a banner pod under the wing on a hangar floor",
         sections: [
           {
             title: "Mechanical Systems 2025 to 2026",
-            intro: "Our team designs, builds, and flies RC airplanes in the AIAA collegiate DBF competition.",
-            bullets: ["My goal: develop an aerodynamic, external deployment mechanism for a 20 ft banner"],
+            intro: "Developed an aerodynamic, external deployment mechanism for a 20 ft banner",
             media: [
-              AERO.m("Slide11Plane.jpeg", "The team's plane with the banner pod", "Black RC airplane with a banner pod under the wing"),
-              AERO.m("Slide11TeamPicture.jpg", "UMass Aeronautics team", "The UMass Aeronautics team holding a team banner"),
-              AERO.m("Slide11ExplodedView.png", "Exploded view of the banner deployment pod", "Exploded CAD view of the banner deployment pod")
+              AERO.m("Slide11Plane.jpeg", "Plane at competition with banner release mechanism", "Black RC airplane with a banner pod under the wing"),
+              AERO.m("Slide11TeamPicture.JPG", "Team Picture 2026", "The UMass Aeronautics team holding a team banner"),
+              AERO.m("Slide11ExplodedView.png", "Exploded view of the final banner deployment mechanism", "Exploded CAD view of the banner deployment pod")
             ]
           },
           {
             title: "Initial design and prototyping",
+             bullets: [
+              "Finalized banner length and determined that there would not be enough space under the wing, so moved mechanism to be in-line with roll axis.",
+              "Second iteration has an open top for quick insertion of banner during ground mission. A servo embedded in the mechanism rotates a door for release. Snap-fit clips on top for quick attachment to fuselage underside.",
+              "Altered shape to be more aerodynamic in third iteration but needed gear train to reach hinge rod (and increase torque)",
+              "Smaller gears were fragile and the shafts were difficult to align in the 3D printed enclosure so the gears did not mesh properly. In the fourth iteration we sized up the servo and switched to a belt-pulley transmission."
+            ],
             media: [
-              AERO.m("Slide12FirstBannerRelease.png", "First design, for under the wing", "CAD of the first banner release design"),
-              AERO.m("Slide12SecondBannerRelease.png", "Second design", "CAD of the second banner release design"),
-              AERO.m("Slide12SecondBannerReleasePrinted.jpeg", "Second design, printed", "3D-printed parts of the second banner release design"),
-              AERO.m("Slide12ThirdDesign.mov", "Third design with gear train"),
+              AERO.m("Slide12FirstBannerRelease.png", "First design for under the wing", "CAD of the first banner release design"),
+              AERO.m("Slide12SecondBannerRelease.png", "Second design for under the fuselage", "CAD of the second banner release design"),
+              AERO.m("Slide12ThirdDesign.MOV", "Third design with gear train"),
               AERO.m("Slide12FourthDesign.jpeg", "Fourth design with belt and pulleys", "3D-printed fourth design with a belt and pulleys")
             ]
           },
           {
             title: "Analysis and testing",
+            bullets: [
+              "Static structural analysis in ANSYS verified that the closed door could withstand over 3x the banner load."
+            ]
             media: [
-              AERO.m("Slide13BannerRelease.mov", "Banner release"),
-              AERO.m("Slide13BannerReleaseCarTesting.mov", "Banner release car testing"),
-              AERO.m("Slide13BannerReleaseClose.mov", "Close-up of the banner release"),
-              AERO.m("Slide13BannerReleaseFEA.png", "Static structural analysis of the pod (ANSYS)", "ANSYS stress plot of the banner pod"),
+              AERO.m("Slide13BannerRelease.MOV", "Banner release"),
+              AERO.m("Slide13BannerReleaseCarTesting.MOV", "Banner release car testing"),
+              AERO.m("Slide13BannerReleaseClose.MOV", "Close-up of the banner release"),
+              AERO.m("Slide13BannerReleaseFEA.png", "Static structural analysis in ANSYS", "ANSYS stress plot of the banner pod"),
               AERO.m("Slide13BannerReleaseHighSpeedTesting.jpeg", "High-speed testing", "Banner pod in high-speed testing")
             ]
           },
           {
             title: "Mechanical Systems 2024 to 2025",
-            bullets: ["My goal: develop a lightweight glider attachment and release mechanism"],
+            bullets: ["Developed a lightweight glider attachment and release mechanism"],
             media: [
-              AERO.m("Slide14Plane.png", "CAD of the aircraft", "CAD of a red and brown RC airplane"),
-              AERO.m("Slide14AeroTeamPicture.jpg", "UMass Aeronautics team at the competition", "The UMass Aeronautics team posing with the aircraft outdoors")
+              AERO.m("Slide14Plane.png", "CAD of the 2025 Plane", "CAD of a red and brown RC airplane"),
+              AERO.m("Slide14AeroTeamPicture.jpg", "Team Picture 2025", "The UMass Aeronautics team posing with the aircraft outdoors")
             ]
           },
           {
@@ -275,8 +281,12 @@
               "Sliding hatch on the aircraft side to cover the connection point"
             ],
             media: [
-              AERO.m("Slide15GliderReleaseDemo.mp4", "Glider release demo"),
-              AERO.m("Slide15GliderReleaseTree.png", "Attachment clip with the \"tree\" snap fit", "Attachment clip designs, from printed part to CAD")
+              AERO.m("Slide15GliderReleaseFEA.png", "Static structural analysis"),
+              AERO.m("GliderClipTesting.mov", "Initial testing"),
+              AERO.m("PETGClip.jpeg", "Bistable PETG clip"),
+              AERO.m("Slide15GliderReleaseTree", "Tree snap fit clip"),
+              AERO.m("Slide15GliderReleaseDemo.mp4", "Iteration 2 testing"),
+              AERO.m("Slide15GliderReleaseHinge.mp4", "Release mechanism with hinge", "Hinge")
             ]
           },
           {
@@ -285,18 +295,9 @@
               "Division goal: create the team's first carbon fiber fuselage and landing gear, establishing a vacuum-bagged, wet-layup protocol"
             ],
             media: [
-              AERO.m("Slide16Plane.png", "CAD of the airplane with the carbon fiber fuselage", "CAD of an RC airplane with a cutaway fuselage"),
+              AERO.m("Slide16Plane.png", "2024 Airplane CAD", "CAD of an RC airplane with a cutaway fuselage"),
               AERO.m("Slide16WetLayup.png", "Vacuum-bagged wet layup", "Vacuum pump and regulator connected to a vacuum-bagged carbon fiber layup")
-            ]
-          },
-          {
-            title: "Carbon fiber molds",
-            bullets: [
-              "Encountered challenges with the mold release",
-              "Switched from a foam and fiberglass mold to 3D-printed mold sections superglued together, covered in epoxy, and sanded down"
-            ],
-            media: [
-              AERO.m("Slide1PrintedMolds.png", "3D-printed molds", "Two 3D-printed fuselage molds"),
+              AERO.m("Slide1PrintedMolds.png", "Encountered challenges with the mold release. Switched from a foam and fiberglass mold to 3D-printed mold sections superglued together, covered in epoxy, and sanded down.", "Two 3D-printed fuselage molds"),
               AERO.m("Slide17LandingGearCAD.png", "Carbon fiber landing gear", "CAD of the carbon fiber landing gear"),
               AERO.m("Slide17FuselageCAD.png", "Carbon fiber fuselage", "CAD of the carbon fiber fuselage")
             ]
@@ -306,9 +307,9 @@
       {
         id: "bioprinter",
         title: "Bioprinter",
-        role: "Building a bioprinter, 2024 to 2026",
+        role: "Building a novel, patented bioprinter, 2024 to 2026",
         summary: "Integrating a recoating system into a FRESH bioprinter to increase print volumes and improve print accuracy. Our bioprinter, \"re-Fresh,\" placed first in the 2025 UMass Tech Challenge.",
-        tags: ["Temperature Control", "Firmware", "Machining", "Provisional Patent"],
+        tags: ["SolidWorks", "Fusion 360 CAM", "CNC Machining and Plasma Cutting", "Firmware Configuration"],
         hero: BIO.p("Slide18BioprinterRender.png"),
         heroAlt: "Render of the re-Fresh bioprinter with a support bath and recoating system",
         sections: [
@@ -322,12 +323,12 @@
               "Concurrently, we are filing for a provisional patent (approval pending)"
             ],
             media: [
-              BIO.m("Slide18BioprinterRender.png", "Render of the re-Fresh bioprinter"),
-              BIO.m("Slide18TechChallenge.jpg", "Accepting the 2025 UMass Tech Challenge award", "Team holding a large check at the 2025 UMass Tech Challenge")
+              BIO.m("Slide18BioprinterRender.png", "", "Render of the re-Fresh bioprinter"),
+              BIO.m("Slide18TechChallenge.jpg", "2025 UMass Tech Challenge", "Team holding a large check at the 2025 UMass Tech Challenge")
             ]
           },
           {
-            title: "Extruder, temperature control, and firmware",
+            title: "Building bioink and support media extrusion systems",
             bullets: [
               {
                 text: "Built a bioink syringe extrusion system capable of temperature sensing and control",
@@ -335,38 +336,30 @@
               },
               "Customized the firmware of a Duet 2 Wifi control board for temperature sensing and control",
               "Developed a scissor lift stage lowering mechanism in parallel (not pictured)"
-            ],
-            media: [
-              BIO.m("Slide19CustomizeFirmware.mov", "Customizing the firmware of the Duet 2 Wifi control board"),
-              BIO.m("Slide19InitialPrototypeOfPeltier.jpeg", "Initial prototype of the Peltier module mount for the syringe extruder"),
-              BIO.m("Slide19WhiteSyringeExtruder.jpeg", "Syringe extruder prototype"),
-              BIO.m("Slide19BlackAndWhiteSyringeExtruder.jpeg", "Syringe extruder mounted on the printer frame"),
-              BIO.m("Slide19BioprinterV1.jpeg", "v1 of the bioprinter")
-            ]
-          },
-          {
-            title: "Support media pump",
-            bullets: [
               {
                 text: "Helped develop the support media pump mechanism",
                 sub: ["A stepper motor attached to a pinion moves along a rack and compresses the syringe containing support media"]
-              }
-            ],
+              },
+              ],
             media: [
+              BIO.m("Slide19BlackAndWhiteSyringeExtruder.jpeg", "V1 of bioink syringe extruder", "Syringe extruder mounted on the printer frame"),
+              BIO.m("Slide19InitialPrototypeOfPeltier.jpeg", "Initial prototype of the Peltier module mount for the syringe extruder"),
+              BIO.m("Slide19BioprinterV1.jpeg", "V1 of the bioprinter")
+              BIO.m("Slide19CustomizeFirmware.MOV", "Customizing firmware for the Duet 2 Wifi control board"),
               BIO.m("Slide20SupportMediaExtrusion.jpeg", "Support media pump mechanism"),
-              BIO.m("Slide20MakingtheSlot.mov", "Making the slot for the rack to sit in"),
-              BIO.m("Slide20V3.jpeg", "v3 of the bioink syringe extruder"),
-              BIO.m("Slide20BioinkSyringeExtruder.mov", "Bioink syringe extruder testing")
+              BIO.m("Slide20MakingtheSlot.MOV", "Making the slot for the rack to sit in"),
+              BIO.m("Slide20V3.jpeg", "V3 of the bioink syringe extruder"),
+              BIO.m("Slide20BioinkSyringeExtruder.MOV", "Bioink syringe extruder testing")
             ]
-          }
+          },
         ]
       },
       {
         id: "kneevive",
         title: "MedTech: KneeVive",
         role: "KneeVive, 2023 to 2024",
-        summary: "An at-home, affordable osteoarthritis symptom-mitigation device that applies daily vertical traction with a thigh plate and linear actuator.",
-        tags: ["Arduino", "3D Printing", "Load Cell", "CAD"],
+        summary: "Building an at-home, affordable osteoarthritis symptom-mitigation device that applies daily vertical traction therapy. Won over $2,000 in the 2024 UMass Tech Challenge.",
+        tags: ["Sensing and Actuation", "3D Printing", "OnShape", "Arduino"],
         hero: KNEE.p("Slide31KneeViveBootPrototype.png"),
         heroAlt: "KneeVive prototype built on a walking boot with a thigh plate mounted above",
         sections: [
@@ -378,8 +371,8 @@
               "Thigh plate and linear actuator system applies pressure to the underside of the knee, simulating the therapy"
             ],
             media: [
-              KNEE.m("Slide31KneeViveBootPrototype.png", "KneeVive prototype", "KneeVive prototype built on a walking boot"),
-              KNEE.m("Slide31Electronics.MOV", "Electronics prototype with an Arduino, LCD screen, and force sensor")
+              KNEE.m("Slide31KneeViveBootPrototype.png", " ", "KneeVive prototype built on a walking boot"),
+              KNEE.m("Slide31Electronics.mp4", "", "Electronics prototype with an Arduino, LCD screen, and force sensor")
             ]
           },
           {
@@ -391,8 +384,8 @@
             ],
             media: [
               KNEE.m("Slide32ThighCradle.png", "Thigh plate", "CAD of the thigh plate"),
+              KNEE.m("Slide32ArmExoskeleton.png", "Arm skeleton", "CAD of an arm skeleton"),
               KNEE.m("Slide32Remote.png", "Remote", "CAD of the remote"),
-              KNEE.m("Slide32ArmExoskeleton.png", "Arm skeleton for a separate project", "CAD of an arm skeleton"),
               KNEE.m("Slide32SchematicForLCD.png", "Schematic for the LCD screen and force sensor failsafe", "Wiring schematic with an Arduino Uno, LCD, linear actuator, and force sensor"),
               KNEE.m("Slide32SecondSchematicforForceSensor.png", "Schematic for the 20 kg load cell", "Wiring schematic of a load cell and HX711 amplifier with an Arduino Uno")
             ]
@@ -405,8 +398,8 @@
         id: "morris-group",
         title: "Morris Group Research",
         role: "Polymer Science and Engineering",
-        summary: "Screening enzymes that degrade PET, building PET nanoparticles, and developing a 96-well plate cooling unit for the lab robots.",
-        tags: ["PET Biodegradation", "Wet Lab", "Dynamic Light Scattering", "Peltier Cooling"],
+        summary: "Helping characterize the stability and selectivity of PET-degrading enzymes for end of life management of plastic water bottles.",
+        tags: ["Nanoparticle Precipitation", "High-throughput Protein Expression", "Dynamic Light Scattering", "Enzyme Cooling"],
         hero: MORRIS.p("Slide24GreenBoxOfCells.jpeg"),
         heroAlt: "Green box of cell samples in a grid of small colored tubes",
         sections: [
@@ -419,36 +412,37 @@
             ],
             media: [
               MORRIS.m("Slide23GroupPhoto.png", "Morris Group", "Morris Group members posing in a hallway"),
-              MORRIS.m("Slide23YellowTray.png", "Tray of samples", "Yellow tray of small sample tubes")
             ]
           },
           {
-            title: "Wet lab experience and skills",
+            title: "Determining the best expressing conditions for the PET-degrading enzymes of interest",
             bullets: [
               "Cloning (and simulating cloning in ApE)",
               "Growing up and transforming cells",
+              "Helping synthesize combinatorial protein expression platforms"
               "Extracting and purifying DNA",
               "Measuring the concentration of nucleic acids with a nanophotometer",
               "Measuring cell concentration with a plate reader (OD600)",
               "Making broths and autoclaving supplies"
             ],
             media: [
-              MORRIS.m("Slide24Cloning.png", "Plasmid map from simulating cloning", "Circular plasmid map"),
+              MORRIS.m("Slide24Cloning.png", "Plasmid map from simulated cloning", "Circular plasmid map"),
               MORRIS.m("Slide24GelExtraction.png", "Gel used for DNA extraction", "Gel electrophoresis image with several lanes of DNA bands"),
-              MORRIS.m("Slide24GreenBoxOfCells.jpeg", "Box of transformed cell samples", "Green box of cell samples in a grid of small colored tubes")
+              MORRIS.m("Slide24GreenBoxOfCells.jpeg", "DNA samples", "Green box of cell samples in a grid of small colored tubes")
             ]
           },
           {
-            title: "PET nanoparticles",
+            title: "PET Nanoparticles Precipitation",
             bullets: [
+              "Precipitating out PET nanoparticles",
               "Measuring particle size with Dynamic Light Scattering (DLS)",
               "Determining the optimal volume fraction of antisolvent for longer growth periods"
             ],
             media: [
-              MORRIS.m("Slide25Precipitating.MOV", "Precipitating out PET nanoparticles"),
-              MORRIS.m("Slide25Rotovap.jpeg", "Rotovap in the lab", "Rotary evaporator setup in a fume hood"),
-              MORRIS.m("Slide25ParticleDiameter.png", "Particle size distributions from DLS", "Plot of particle diameter distributions from dynamic light scattering"),
-              MORRIS.m("Slide25VolumeFraction.png", "Volume fraction of antisolvent", "Plot of normalized absorbance against volume fraction of antisolvent")
+              MORRIS.m("Slide25Precipitating.MOV", "", "Precipitating out PET nanoparticles"),
+              MORRIS.m("Slide25Rotovap.jpeg", "", "Rotary evaporator setup in a fume hood"),
+              MORRIS.m("Slide25ParticleDiameter.png", "", "Plot of particle diameter distributions from dynamic light scattering"),
+              MORRIS.m("Slide25VolumeFraction.png", "", "Plot of normalized absorbance against volume fraction of antisolvent")
             ]
           },
           {
@@ -467,73 +461,14 @@
         ]
       },
 
-      /* --------------------------------------------------------- Hackathons */
-      {
-        id: "ai-hardware-sorter",
-        title: "AI Hardware Sorter",
-        role: "UMass Hackathon XII",
-        summary: "A machine that uses an AI model to identify and sort mechanical fasteners. I built the belt feeds, vibrating channel, sorting cylinder, and frame.",
-        tags: ["Belt Feeds", "3D Printing", "Stepper Motors", "Servo"],
-        hero: HACK.p("Slide21AIHardwareSorter.jpg"),
-        heroAlt: "Hardware sorter with belt feeds, a purple sorting cylinder, and a wooden frame on a workbench",
-        sections: [
-          {
-            title: "AI Hardware Sorter",
-            bullets: [
-              "Training an AI model to autonomously identify and sort mechanical fasteners",
-              {
-                text: "The mechanical components I helped with:",
-                sub: [
-                  "Two belt feeds: 3D-printed TPU belts, two geared stepper motors rotating recycled spools (our pulleys), and wood and particle board structures",
-                  "A vibrating aluminum channel suspended between two posts, with two vibratory motors on either side of the sheet",
-                  "A 3D-printed cylinder with dividers attached to a continuous rotation servo to organize the parts",
-                  "Wooden frame and ramp"
-                ]
-              }
-            ],
-            media: [
-              HACK.m("Slide21AIHardwareSorter.jpg", "The AI Hardware Sorter at UMass Hackathon XII")
-            ]
-          }
-        ]
-      },
-      {
-        id: "shady-business",
-        title: "Shady Business",
-        role: "Wind-powered grow light, UMass Hack(H)er413 2025",
-        summary: "A mini wind turbine that powers a grow light, keeping our plants and energy green.",
-        tags: ["Wind Turbine", "Gear Ratio", "Brushless DC Motor", "Prototyping"],
-        hero: HACK.p("Slide22ShadyBusiness.jpg"),
-        heroAlt: "Small wind turbine next to a grow light stand over a potted plant on a wooden board",
-        sections: [
-          {
-            title: "Wind-powered grow light",
-            bullets: [
-              "Developing a mini wind turbine to power a grow light (keeping our plants and energy green!)",
-              {
-                text: "The mechanical components:",
-                sub: [
-                  "Mini wind turbine with removable blades",
-                  "Brushless DC motor with a 90:1 gear ratio (necessary to convert the high torque rotation of the blades to high speed rotation of the generator)",
-                  "Grow light stand with a removable lid (to access and cover electronics)"
-                ]
-              }
-            ],
-            media: [
-              HACK.m("Slide22ShadyBusiness.jpg", "Shady Business prototype at UMass Hack(H)er413 2025")
-            ]
-          }
-        ]
-      },
-
       /* ------------------------------------------------------------ Classes */
       {
         id: "manufacturing",
         title: "Manufacturing",
         role: "CNC Machining Team Lead, Fall 2025",
-        summary: "Designed and machined five aluminum standoff mounts for a PCB fixture assembly, from GD&T inspection drawings to speeds, feeds, and machining time.",
-        tags: ["CNC Machining", "GD&T", "Fixturing", "Speeds and Feeds"],
-        hero: CLASS.p("Slide27MachinedStandoffs.jpeg"),
+        summary: "Designed and machined five aluminum standoff mounts for a PCB fixture assembly.",
+        tags: ["CNC Machining", "Engineering Drawings", "GD&T", "Design for Manufacturing"],
+        hero: CLASS.p("CNCCoverPhoto.jpeg"),
         heroAlt: "Five machined aluminum standoff mounts in a row",
         sections: [
           {
@@ -547,9 +482,9 @@
             ],
             media: [
               CLASS.m("Slide27PCBMountAssembly.png", "Standoff mount in the PCB fixture assembly", "CAD of the PCB fixture assembly with standoff mounts"),
-              CLASS.m("Slide27CNCStandoffMount.mp4", "CNC toolpath simulation for the standoff mount"),
-              CLASS.m("Slide27StandoffDrawing.png", "Standoff drawing with GD&T", "Engineering drawing of the standoff mount with GD&T"),
-              CLASS.m("Slide27MachinedStandoffs.jpeg", "The five machined standoff mounts")
+              CLASS.m("Slide27CNCStandoffMount.mp4", "Simulation of toolpaths for the standoff mount"),
+              CLASS.m("Slide27StandoffDrawing.png", "Drawing with GD&T", "Engineering drawing of the standoff mount with GD&T"),
+              CLASS.m("Slide27MachinedStandoffs.jpeg", "The five finished machined standoff mounts")
             ]
           }
         ]
@@ -558,9 +493,9 @@
         id: "mechanical-components",
         title: "Design of Mechanical Components",
         role: "Wrench project and static structural analysis",
-        summary: "Designed, fabricated, and tested a lightweight wrench for 290 lb-in of torque, and ran static structural, fatigue, and contact analyses in ANSYS.",
-        tags: ["MATLAB", "ANSYS Mechanical", "FEA", "Fatigue and Contact Analysis"],
-        hero: CLASS.p("Slide28MachinedWrench.jpeg"),
+        summary: "Designed, fabricated, and tested a lightweight wrench capable of withstanding 290 lb-in of torque. Static structural and contact analysis in ANSYS informed each design iteration.",
+        tags: ["ANSYS", "Static Structural and Contact FEA", "MATLAB", "Manual Milling"],
+        hero: CLASS.p("Slide28WrenchContactAnalysis.png"),
         heroAlt: "Machined aluminum wrench with a row of circular cutouts",
         sections: [
           {
@@ -589,9 +524,9 @@
             title: "More static structural analysis",
             intro: "More static structural analysis for design classes, including simulating fatigue and contact responses.",
             media: [
-              CLASS.m("Slide29GearsZoomedIn.png", "Gear tooth contact stress", "ANSYS equivalent stress plot of meshing gear teeth"),
-              CLASS.m("Slide29SafetyFactor.png", "Safety factor plot", "ANSYS safety factor plot of a triangular bracket"),
-              CLASS.m("Slide29FatigueLife.png", "Fatigue life plot", "ANSYS fatigue life plot of a filleted joint")
+              CLASS.m("Slide29GearsZoomedIn.png", "Gear tooth contact stress plot", "ANSYS equivalent stress plot of meshing gear teeth"),
+              CLASS.m("Slide29SafetyFactor.png", "Safety factor contour plot", "ANSYS safety factor plot of a triangular bracket"),
+              CLASS.m("Slide29FatigueLife.png", "Fatigue life contour plot", "ANSYS fatigue life plot of a filleted joint")
             ]
           }
         ]
@@ -600,9 +535,9 @@
         id: "ece-smart-car",
         title: "ECE Smart Car",
         role: "Arduino circuits and programming",
-        summary: "Built a small car that detects obstacles or responds to light with movement, a blinking LED, or a sound.",
-        tags: ["Arduino", "ATmega328P", "Circuit Design", "Sensors"],
-        hero: CLASS.p("Slide30Video1.mov"),
+        summary: "Built a smart-car that detects obstacles or responds to light with movement, by blinking an LED, or emitting a sound.",
+        tags: ["Circuit Design", "Arduino IDE"],
+        hero: CLASS.p("ECECoverPhoto.jpeg"),
         heroAlt: "Smart car breadboard circuit",
         sections: [
           {
@@ -613,8 +548,8 @@
               "Build circuits with infrasound sensors, photoresistors, piezo speakers, op amps, transistors, capacitors, etc."
             ],
             media: [
-              CLASS.m("Slide30Video1.mov", "Smart car demo 1"),
-              CLASS.m("Slide30Video2.mov", "Smart car demo 2"),
+              CLASS.m("Slide30Video1.MOV", "Smart car demo 1"),
+              CLASS.m("Slide30Video2.MOV", "Smart car demo 2"),
               CLASS.m("Slide30Video3.mov", "Smart car demo 3")
             ]
           }
@@ -622,20 +557,79 @@
       }
     ],
 
+    /* --------------------------------------------------------- Hackathons */
+      {
+        id: "ai-hardware-sorter",
+        title: "AI Hardware Sorter",
+        role: "UMass Hackathon XII",
+        summary: "Helped develop an automatic sorting device that trains an LLM to identify fasteners from a mix of miscellaneous hardware.",
+        tags: ["Rapid Prototyping", "CAD", "Wood Working"],
+        hero: HACK.p("Slide21AIHardwareSorter.jpg"),
+        heroAlt: "Hardware sorter with belt feeds, a purple sorting cylinder, and a wooden frame on a workbench",
+        sections: [
+          {
+            title: "AI Hardware Sorter",
+            bullets: [
+              "Training an AI model to autonomously identify and sort mechanical fasteners",
+              {
+                text: "The mechanical components I helped with:",
+                sub: [
+                  "Two belt feeds: 3D-printed TPU belts, two geared stepper motors rotating recycled spools (our pulleys), and wood and particle board structures",
+                  "A vibrating aluminum channel suspended between two posts, with two vibratory motors on either side of the sheet",
+                  "A 3D-printed cylinder with dividers attached to a continuous rotation servo to organize the parts",
+                  "Wooden frame and ramp"
+                ]
+              }
+            ],
+            media: [
+              HACK.m("Slide21AIHardwareSorter.jpg", "", "The AI Hardware Sorter at UMass Hackathon XII")
+            ]
+          }
+        ]
+      },
+      {
+        id: "shady-business",
+        title: "Shady Business",
+        role: "Wind-powered grow light, UMass Hack(H)er413 2025",
+        summary: "Helped develop a mini wind turbine that powers a grow light, keeping our plants and energy green!",
+        tags: ["Rapid Prototyping", "CAD", "Woodworking"],
+        hero: HACK.p("Slide22ShadyBusiness.jpg"),
+        heroAlt: "Small wind turbine next to a grow light stand over a potted plant on a wooden board",
+        sections: [
+          {
+            title: "Wind-powered grow light",
+            bullets: [
+              "Developing a mini wind turbine to power a grow light (keeping our plants and energy green!)",
+              {
+                text: "The mechanical components:",
+                sub: [
+                  "Mini wind turbine with removable blades",
+                  "Brushless DC motor with a 90:1 gear ratio (necessary to convert the high torque rotation of the blades to high speed rotation of the generator)",
+                  "Grow light stand with a removable lid (to access and cover electronics)"
+                ]
+              }
+            ],
+            media: [
+              HACK.m("Slide22ShadyBusiness.jpg", "", "Shady Business prototype at UMass Hack(H)er413 2025")
+            ]
+          }
+        ]
+      },
+
     /* Slide: Interests outside of engineering */
     interests: [
-      HOBBY.m("Slide33Plants.jpeg", "Collecting and taking care of my house plants"),
+      HOBBY.m("Cricket.JPEG", "I love to be outside...gardening, hiking, and appreciating nature."),
+      HOBBY.m("Yellowstone.jpeg", "", "Yellowstone picture"),
       HOBBY.m("Slide33Pottery.jpeg", "I recently took a wheel throwing pottery class and loved it!"),
       HOBBY.m("Slide33BlueBowl.jpeg", "", "Blue glazed pottery bowl held over a carpet"),
       HOBBY.m("Slide33Dog.jpg", "Traveling! In January 2026 I volunteered on a bamboo farm in Greece", "Dog resting in a green field on a farm with hills behind"),
-      HOBBY.m("Slide33Sushi.jpeg", "...and made my first sushi rolls"),
-      HOBBY.m("Slide33Cake.jpeg", "Learning how to cook and bake as well. Always willing to try a new recipe!")
+      HOBBY.m("Slide33Sushi.jpeg", "...and made my first sushi rolls. I'm learning how to cook and am always willng to try a new recipe!"),
     ],
 
     /* Slide: Skills and contact information */
     skills: [
-      { title: "Software", items: "SolidWorks, NX and Teamcenter, Rhino, Onshape, Fusion 360 CAM, Makera CAM, ANSYS Workbench & Mechanical, MATLAB, Simulink, Linux" },
-      { title: "Prototyping", items: "CNC Machining (Mill and Lathe), Manual Milling, Laser Cutting, 3D Printing, Plasma Cutting, Metal Bandsaw, Cold Saw, Drill Press, Hand and Power Tools, Composite Part Fabrication (Wet Layup, Vacuum Infusion)" },
+      { title: "Software", items: "SolidWorks, NX and Teamcenter, Rhino, Onshape, Fusion 360 CAM, Makera CAM, ANSYS Workbench & Mechanical, MATLAB & Simulink, Linux" },
+      { title: "Prototyping", items: "CNC Machining (Mill and Lathe), Manual Milling, Laser Cutting, 3D Printing, Plasma Cutting (in training), Saws for Wood and Metal Work (Bandsaw, Cold Saw, Miter Saw, Table Saw), Drill Press, Hand and Power Tools, Composite Part Fabrication (Wet Layup, Vacuum Infusion)" },
       { title: "Electronics", items: "Arduino, Soldering, PCB Fabrication, Debugging and Testing Software" },
       { title: "Documentation", items: "Engineering Drawings, GD&T, Jira, BOM, Microsoft Office (Excel, PowerPoint, Teams, etc.)" },
       { title: "Research", items: "Wet Lab Experience, Scientific Writing, Literature Research" }
