@@ -296,7 +296,7 @@
             ],
             media: [
               AERO.m("Slide16Plane.png", "2024 Airplane CAD", "CAD of an RC airplane with a cutaway fuselage"),
-              AERO.m("Slide16WetLayup.png", "Vacuum-bagged wet layup", "Vacuum pump and regulator connected to a vacuum-bagged carbon fiber layup")
+              AERO.m("Slide16WetLayup.png", "Vacuum-bagged wet layup", "Vacuum pump and regulator connected to a vacuum-bagged carbon fiber layup"),
               AERO.m("Slide1PrintedMolds.png", "Encountered challenges with the mold release. Switched from a foam and fiberglass mold to 3D-printed mold sections superglued together, covered in epoxy, and sanded down.", "Two 3D-printed fuselage molds"),
               AERO.m("Slide17LandingGearCAD.png", "Carbon fiber landing gear", "CAD of the carbon fiber landing gear"),
               AERO.m("Slide17FuselageCAD.png", "Carbon fiber fuselage", "CAD of the carbon fiber fuselage")
@@ -335,11 +335,11 @@
                 sub: ["Integrated a Peltier module, heat sink, and thermistor"]
               },
               "Customized the firmware of a Duet 2 Wifi control board for temperature sensing and control",
-              "Developed a scissor lift stage lowering mechanism in parallel (not pictured)"
+              "Developed a scissor lift stage lowering mechanism in parallel (not pictured)",
               {
                 text: "Helped develop the support media pump mechanism",
                 sub: ["A stepper motor attached to a pinion moves along a rack and compresses the syringe containing support media"]
-              },
+              }
               ],
             media: [
               BIO.m("Slide19BlackAndWhiteSyringeExtruder.jpeg", "V1 of bioink syringe extruder", "Syringe extruder mounted on the printer frame"),
@@ -623,7 +623,7 @@
       HOBBY.m("Slide33Pottery.jpeg", "I recently took a wheel throwing pottery class and loved it!"),
       HOBBY.m("Slide33BlueBowl.jpeg", "", "Blue glazed pottery bowl held over a carpet"),
       HOBBY.m("Slide33Dog.jpg", "Traveling! In January 2026 I volunteered on a bamboo farm in Greece", "Dog resting in a green field on a farm with hills behind"),
-      HOBBY.m("Slide33Sushi.jpeg", "...and made my first sushi rolls. I'm learning how to cook and am always willng to try a new recipe!"),
+      HOBBY.m("Slide33Sushi.jpeg", "...and made my first sushi rolls. I'm learning how to cook and am always willng to try a new recipe!")
     ],
 
     /* Slide: Skills and contact information */
