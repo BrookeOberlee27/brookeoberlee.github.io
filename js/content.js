@@ -344,7 +344,7 @@
             media: [
               BIO.m("Slide19BlackAndWhiteSyringeExtruder.jpeg", "V1 of bioink syringe extruder", "Syringe extruder mounted on the printer frame"),
               BIO.m("Slide19InitialPrototypeOfPeltier.jpeg", "Initial prototype of the Peltier module mount for the syringe extruder"),
-              BIO.m("Slide19BioprinterV1.jpeg", "V1 of the bioprinter")
+              BIO.m("Slide19BioprinterV1.jpeg", "V1 of the bioprinter"),
               BIO.m("Slide19CustomizeFirmware.MOV", "Customizing firmware for the Duet 2 Wifi control board"),
               BIO.m("Slide20SupportMediaExtrusion.jpeg", "Support media pump mechanism"),
               BIO.m("Slide20MakingtheSlot.MOV", "Making the slot for the rack to sit in"),
@@ -555,7 +555,6 @@
           }
         ]
       }
-    ],
 
     /* --------------------------------------------------------- Hackathons */
       {
@@ -615,6 +614,7 @@
           }
         ]
       },
+    ],
 
     /* Slide: Interests outside of engineering */
     interests: [
