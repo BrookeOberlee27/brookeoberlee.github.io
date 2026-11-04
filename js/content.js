@@ -256,7 +256,7 @@
             title: "Analysis and testing",
             bullets: [
               "Static structural analysis in ANSYS verified that the closed door could withstand over 3x the banner load."
-            ]
+            ],
             media: [
               AERO.m("Slide13BannerRelease.MOV", "Banner release"),
               AERO.m("Slide13BannerReleaseCarTesting.MOV", "Banner release car testing"),
