@@ -93,9 +93,9 @@
             ],
             media: [
               REGENT.m("Slide4SeawaterCoolingLoop.png", "Sea water cooling loop", "CAD of the sea water cooling tubing loop"),
+              REGENT.m("Slide4CoolingLooponFoil.png", "Mounts and braces for the intake tubing on the main foil case", "CAD of the main foil case with tubing, mounts, and braces"),
               REGENT.m("Slide4Catchplate.png", "Catch plate modified with O-rings and sealant", "Exploded view of the modified catch plate"),
-              REGENT.m("Slide4SeagliderinHangar.jpeg", "", "REGENT Seaglider inside a hangar"),
-              REGENT.m("Slide4CoolingLooponFoil.png", "Mounts and braces for the intake tubing on the main foil case", "CAD of the main foil case with tubing, mounts, and braces")
+              REGENT.m("Slide4SeagliderinHangar.jpeg", "", "REGENT Seaglider inside a hangar")
             ]
           },
           {
@@ -138,8 +138,8 @@
             ],
             media: [
               DELSYS.m("Slide6DelsysPCB.jpeg", "Double-sided PCB fabricated on the desktop CNC machine"),
-              DELSYS.m("Slide6DelsysCNCDesktop.MOV", "Aluminum enclosure milled on the desktop CNC machine"),
-              DELSYS.m("Slide6DelsysCAM.png", "Toolpaths in the MakeraCAM")
+              DELSYS.m("Slide6DelsysCAM.png", "Toolpaths in the MakeraCAM"),
+              DELSYS.m("Slide6DelsysCNCDesktop.MOV", "Aluminum enclosure milled on the desktop CNC machine")
             ]
           },
           {
@@ -284,7 +284,7 @@
               AERO.m("Slide15GliderReleaseFEA.png", "Static structural analysis"),
               AERO.m("GliderClipTesting.mov", "Initial testing"),
               AERO.m("PETGClip.jpeg", "Bistable PETG clip"),
-              AERO.m("Slide15GliderReleaseTree", "Tree snap fit clip"),
+              AERO.m("Slide15GliderReleaseTree.png", "Tree snap fit clip"),
               AERO.m("Slide15GliderReleaseDemo.mp4", "Iteration 2 testing"),
               AERO.m("Slide15GliderReleaseHinge.mp4", "Release mechanism with hinge", "Hinge")
             ]
@@ -297,7 +297,7 @@
             media: [
               AERO.m("Slide16Plane.png", "2024 Airplane CAD", "CAD of an RC airplane with a cutaway fuselage"),
               AERO.m("Slide16WetLayup.png", "Vacuum-bagged wet layup", "Vacuum pump and regulator connected to a vacuum-bagged carbon fiber layup"),
-              AERO.m("Slide1PrintedMolds.png", "Encountered challenges with the mold release. Switched from a foam and fiberglass mold to 3D-printed mold sections superglued together, covered in epoxy, and sanded down.", "Two 3D-printed fuselage molds"),
+              AERO.m("Slide17PrintedMolds.png", "Encountered challenges with the mold release. Switched from a foam and fiberglass mold to 3D-printed mold sections superglued together, covered in epoxy, and sanded down.", "Two 3D-printed fuselage molds"),
               AERO.m("Slide17LandingGearCAD.png", "Carbon fiber landing gear", "CAD of the carbon fiber landing gear"),
               AERO.m("Slide17FuselageCAD.png", "Carbon fiber fuselage", "CAD of the carbon fiber fuselage")
             ]
@@ -385,7 +385,7 @@
             media: [
               KNEE.m("Slide32ThighCradle.png", "Thigh plate", "CAD of the thigh plate"),
               KNEE.m("Slide32ArmExoskeleton.png", "Arm skeleton", "CAD of an arm skeleton"),
-              KNEE.m("Slide32Remote.png", "Remote", "CAD of the remote"),
+              /* KNEE.m("Slide32Remote.png", "Remote", "CAD of the remote"), */
               KNEE.m("Slide32SchematicForLCD.png", "Schematic for the LCD screen and force sensor failsafe", "Wiring schematic with an Arduino Uno, LCD, linear actuator, and force sensor"),
               KNEE.m("Slide32SecondSchematicforForceSensor.png", "Schematic for the 20 kg load cell", "Wiring schematic of a load cell and HX711 amplifier with an Arduino Uno")
             ]
