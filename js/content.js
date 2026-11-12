@@ -25,6 +25,7 @@
   const DELSYS = folder("Delsys");
   const REPRIEVE = folder("Reprieve");
   const MAKER = folder("Makerspace");
+  const SDP = folder("SDP Hardware Sorter");
   const AERO = folder("Aeronautics");
   const BIO = folder("Bioprinter");
   const KNEE = folder("KneeVive");
@@ -54,7 +55,7 @@
       { id: "work", title: "Work experience", theme: "slate", projects: ["regent", "delsys", "reprieve", "makerspace"] },
       { id: "clubs", title: "Clubs and activities", theme: "lilac", projects: ["aeronautics", "bioprinter", "kneevive"] },
       { id: "research", title: "Research", theme: "cream", projects: ["morris-group"] },
-      { id: "classes", title: "Class projects", theme: "navy", projects: ["manufacturing", "mechanical-components", "ece-smart-car"] },
+      { id: "classes", title: "Class projects", theme: "navy", projects: ["sdp", "manufacturing", "mechanical-components", "ece-smart-car"] },
       { id: "hackathons", title: "Hackathon projects", theme: "lilac", projects: ["ai-hardware-sorter", "shady-business"] }
     ],
 
@@ -343,12 +344,13 @@
               ],
             media: [
               BIO.m("Slide19BlackAndWhiteSyringeExtruder.jpeg", "V1 of bioink syringe extruder", "Syringe extruder mounted on the printer frame"),
-              BIO.m("Slide19InitialPrototypeOfPeltier.jpeg", "Initial prototype of the Peltier module mount for the syringe extruder"),
+              BIO.m("Slide19InitialPrototypeOfPeltier.jpeg", "Initial prototype of the Peltier module mount for the syringe extruder (made on a manual mill)"),
+              BIO.m("PeltierMountV2.jpeg", "Revised Peltier module mount made on the CNC mill"),
               BIO.m("Slide19BioprinterV1.jpeg", "V1 of the bioprinter"),
               BIO.m("Slide19CustomizeFirmware.MOV", "Customizing firmware for the Duet 2 Wifi control board"),
               BIO.m("Slide20SupportMediaExtrusion.jpeg", "Support media pump mechanism"),
               BIO.m("Slide20MakingtheSlot.MOV", "Making the slot for the rack to sit in"),
-              BIO.m("Slide20V3.jpeg", "V3 of the bioink syringe extruder"),
+              BIO.m("Slide20V3.jpeg", "V3 of the bioink syringe extruder with third prototype of Peltier module mount"),
               BIO.m("Slide20BioinkSyringeExtruder.MOV", "Bioink syringe extruder testing")
             ]
           },
@@ -462,6 +464,64 @@
       },
 
       /* ------------------------------------------------------------ Classes */
+      {
+        id: "sdp",
+        title: "Senior Design Project: An Automated Hardware Sorter",
+        role: "Design Lead, Fall 2026 (Ongoing)",
+        summary: "Summary.",
+        tags: ["Dynamic System Design", "Conveyor Analysis", "Prototyping"],
+        hero: SDP.p(" "),
+        heroAlt: " ",
+        sections: [
+          {
+            title: "Project overview",
+            bullets: [
+              "Developing a automated hardware sorting system for makerspaces, hobbyists, and small machine shops that uses computer vision to identify and sort fasteners from a mixture.",
+              "Automatic hardware sorters are available, but they are optimized for high-throughput, industrial spaces. Our device is designed for educational spaces: it\'s compact, affordable, accessible, and safe. Existing, small-scale hardware sorting devices have a limited range of hardware they can sort because they leverage purely mechanical methods for sorting (i.e. sorting based on differences in mass, size, and shape)."
+            ],
+            media: [
+              SDP.m("PartyMix.jpg", "Miscellaneous hardware discarded in the All Campus Makerspace or recovered from older project teardowns has accumulated in a throw-away bin, dubbed the \"party mix.\" Even though the fasteners are often functional, they are thrown away because manually sorting them is a tedious process. For reference, we estimate that the party mixture in the All Campus Makerspace would cost $42 without shipping to replace. It would take our $250 device only five sorted buckets to break even.", "Party mix")
+            ]
+          },
+          {
+            title: "Ideation, analysis, and design",
+            bullets: [
+              "Led the functional decomposition of the system into feeding, singulation, separation, identification, and sorting.",
+              "As design lead, conducted research, evaluated preliminary analysis, and used Pugh matrices to determine the concept for each subsystem.",
+              {
+                text: "Lead for singulation and separation subsystem",
+                sub: [
+                  "Since the input hardware is of varying size and shape, most existing manufacturing methods to separate individual pieces will not apply.",
+                  "The dual lane, variable speed conveyor: Two adjacent conveyor belts, separated by a thin, sub flush dividing wall, run at different speeds. Hardware is deposited onto the first conveyor belt and pushed onto the second belt by a fixed pusher plate mounted to the conveyor frame. The downstream second conveyor belt is moving at a higher speed and picks up each hardware component much faster, allowing the differences in speeds to pull items apart.",
+                  "Co-led analysis for a dual-lane, variable speed conveyor system to determine belt speeds and tension, shaft sizes, motor torque and speed requirements; summarized assumptions, constraints, and derived formulas in a report.",
+                  "Designed custom 3D-printed brackets, bearing mounts, dividers, channels, and motor rollers; integrated t-slotted extrusion, bearings, shafts, tensioning hardware, and belts into full assembly.",
+                  "Designed a second iteration to use only one motor and drive the second belt through a belt-pulley transmission.",
+                  "The timing pulleys provide a 3:1 speed ratio to speed up the second conveyor belt by a factor of three. Prior analysis indicated that this ratio would produce a minimum 1\" gap between parts and that the calculated drive torque was within the motor\'s quoted maximum."
+                ]
+              }
+            ],
+            media: [
+              SDP.m("FullCAD.png", "Full assembly of hardware sorter. The four subsystems include (1) vibratory linear feeder to move hardware from the receptacle to the conveyor system (2) dual lane, variable speed conveyor system with channels to corral hardware into a single file line and separate each component (3) global shutter camera system to identify hardware and (4) rotating pie to collect each piece of hardware.", "CAD of SDP assembly"),
+              SDP.m("PughMatrix.png", "Three designs for separation were evaluated in a Pugh matrix (Conveyor Cascade, Dual Lane Conveyor, and Pick and Place Robot) based on design simplicity, ease of manufacturing and assembly, jamming risk, cost, speed, transport effectiveness, input constraints, and size. The dual lane conveyor wins because of its compactness, superior transport effectiveness, and low cost.", "Pugh matrix"),
+              SDP.m("TwoMotorsConveyor.png", "V1 of dual lane conveyor system. Two motors would be placed on each side to drive the orange shafts.", "Two motors conveyor"),
+              SDP.m("OneMotorConveyor.png", "V2 of dual lane conveyor system", "One motor"),
+              SDP.m("Triangles.png", "Fences to push hardware from first belt to second belt", "Fences"),
+              SDP.m("BeltPulleyTransmission.png", "A belt-pulley transmission was selected over a gear train because they can span longer distances and are less sensitive to misalignment (circumvents the challenge of adding intermediate gears and gear meshing).", "Timing belt pulleys"),
+              SDP.m("TensionSystem.png", "The eye bolts will pass through a bracket on the extrusion, and tightening a nut on the other side of the bracket will move the eye bolts laterally, allowing the shaft to slide through a slot in the extrusion and pull the belt tight.", "Tension system")
+            ]
+          },
+          {
+            title: "Prototyping",
+            bullets: [
+              "Helped source materials, create BOMs, modify metal parts for, and assemble the first prototype."
+            ],
+            media: [
+              SDP.m("ConveyorFirstPrototype.jpg", "Initial prototype", "Initial prototype SDP"),
+              SDP.m("SecondBeltTesting.MOV", "Testing of the second belt", "Video of the second belt")
+            ]
+          }
+        ]
+      },
       {
         id: "manufacturing",
         title: "Manufacturing",
