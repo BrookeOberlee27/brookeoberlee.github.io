@@ -468,10 +468,10 @@
         id: "sdp",
         title: "Senior Design Project: An Automated Hardware Sorter",
         role: "Design Lead, Fall 2026 (Ongoing)",
-        summary: "Summary.",
+        summary: "Designed, built, and integrated a dual lane, variable speed conveyor system for an automatic hardware sorter.",
         tags: ["Dynamic System Design", "Conveyor Analysis", "Prototyping"],
-        hero: SDP.p(" "),
-        heroAlt: " ",
+        hero: SDP.p("ConveyorFirstPrototype.jpg"),
+        heroAlt: "Initial prototype",
         sections: [
           {
             title: "Project overview",
@@ -480,7 +480,7 @@
               "Automatic hardware sorters are available, but they are optimized for high-throughput, industrial spaces. Our device is designed for educational spaces: it\'s compact, affordable, accessible, and safe. Existing, small-scale hardware sorting devices have a limited range of hardware they can sort because they leverage purely mechanical methods for sorting (i.e. sorting based on differences in mass, size, and shape)."
             ],
             media: [
-              SDP.m("PartyMix.jpg", "Miscellaneous hardware discarded in the All Campus Makerspace or recovered from older project teardowns has accumulated in a throw-away bin, dubbed the \"party mix.\" Even though the fasteners are often functional, they are thrown away because manually sorting them is a tedious process. For reference, we estimate that the party mixture in the All Campus Makerspace would cost $42 without shipping to replace. It would take our $250 device only five sorted buckets to break even.", "Party mix")
+              SDP.m("PartyMix.jpg", "Miscellaneous hardware discarded in the All Campus Makerspace or recovered from older project teardowns has accumulated in a throw-away bin, dubbed the \"party mix.\" Even though the fasteners are often functional, they are thrown away because manually sorting them is a tedious process. For reference, we estimate that the party mix would cost $42 without shipping to replace. It would take our $250 device only five sorted buckets to break even.", "Party mix")
             ]
           },
           {
@@ -493,10 +493,10 @@
                 sub: [
                   "Since the input hardware is of varying size and shape, most existing manufacturing methods to separate individual pieces will not apply.",
                   "The dual lane, variable speed conveyor: Two adjacent conveyor belts, separated by a thin, sub flush dividing wall, run at different speeds. Hardware is deposited onto the first conveyor belt and pushed onto the second belt by a fixed pusher plate mounted to the conveyor frame. The downstream second conveyor belt is moving at a higher speed and picks up each hardware component much faster, allowing the differences in speeds to pull items apart.",
-                  "Co-led analysis for a dual-lane, variable speed conveyor system to determine belt speeds and tension, shaft sizes, motor torque and speed requirements; summarized assumptions, constraints, and derived formulas in a report.",
+                  "Co-led analysis to determine belt speeds and tension, shaft sizes, motor torque and speed requirements",
                   "Designed custom 3D-printed brackets, bearing mounts, dividers, channels, and motor rollers; integrated t-slotted extrusion, bearings, shafts, tensioning hardware, and belts into full assembly.",
                   "Designed a second iteration to use only one motor and drive the second belt through a belt-pulley transmission.",
-                  "The timing pulleys provide a 3:1 speed ratio to speed up the second conveyor belt by a factor of three. Prior analysis indicated that this ratio would produce a minimum 1\" gap between parts and that the calculated drive torque was within the motor\'s quoted maximum."
+                  "The timing pulleys provide a 1:3 speed ratio. Prior analysis indicated that this ratio would produce a minimum 1\" gap between parts."
                 ]
               }
             ],
@@ -507,7 +507,7 @@
               SDP.m("OneMotorConveyor.png", "V2 of dual lane conveyor system", "One motor"),
               SDP.m("Triangles.png", "Fences to push hardware from first belt to second belt", "Fences"),
               SDP.m("BeltPulleyTransmission.png", "A belt-pulley transmission was selected over a gear train because they can span longer distances and are less sensitive to misalignment (circumvents the challenge of adding intermediate gears and gear meshing).", "Timing belt pulleys"),
-              SDP.m("TensionSystem.png", "The eye bolts will pass through a bracket on the extrusion, and tightening a nut on the other side of the bracket will move the eye bolts laterally, allowing the shaft to slide through a slot in the extrusion and pull the belt tight.", "Tension system")
+              SDP.m("TensionSystem.png", "The eye bolts are supported by a bracket on the extrusion. Tightening a nut on the other side of the bracket will move the eye bolts laterally, allowing the shaft to slide through a slot in the extrusion and pull the belt tight.", "Tension system")
             ]
           },
           {
